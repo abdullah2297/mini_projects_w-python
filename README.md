@@ -22,3 +22,8 @@ numpy and random Python libraries are used to build this game. Instead of asking
 
 ### 5. BinarySearch
 How to implement BinarySearch from scratch
+
+### 6.Python OOP Explaination and Example
+
+### 7. Basic Calculator using OOP
+
