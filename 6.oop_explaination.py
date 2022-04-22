@@ -11,11 +11,14 @@
 # 4. Inheritance
 
 # Class ==> is Container for all Instances, Start with Capital letter, 
-# Class variables ==> All instances inherit the same values, 
+# Class variables ==> All instances inherit the constructor variables, 
 # init Function ==> is container for all Data, all instances can access this data, every time you create a new class will call this function
-# Class Methods ==> @classmethods, control class attr, can't access class methods, take cls as param
+# Class Methods ==> 
+# class method that can be called using ClassName.MethodName(). The class method can also be called using an object of the class 
+# @classmethods, control class attr, take cls as param
 # Instance ==> is called object and inherit all class Variables and methods
 # Instance Methods ==> we can use it for all instances, assign self to every method
+# Static Methods ==> 
 
 from datetime import date
 class Prospect:
@@ -36,7 +39,14 @@ class Prospect:
         self.__prog = prog ## __ For Encapsulation purpose
         Prospect.numOfProspects +=1
 
-
+    @classmethod
+    def owner(cls):
+        return cls('abdullah', 'Amit','b2b','01022',['contract'])
+    ## class method
+    ## Change department
+    @classmethod   ## Any change happen will efect all instances
+    def change_department(self,new_department):
+        self.department = new_department
     ## Define set and get for ENCAPSULATION Purpose
     def setProg(self):
         if self.funnel[-1] != 'contract':
@@ -82,6 +92,7 @@ ali = Prospect('ali','Voda','Sales Manager', '010025',['Call','meeting'],age=40)
 medo = Prospect('ali','Voda','Sales Manager', '010025',['Call'],age=40)
 
 ## Change some values
+## This method againest Encapsulation Concept ## Check setProg Function
 ali.company = "Etisalat"
 ali.title = "Business developer"
 
