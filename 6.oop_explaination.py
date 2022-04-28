@@ -42,11 +42,17 @@ class Prospect:
     @classmethod
     def owner(cls):
         return cls('abdullah', 'Amit','b2b','01022',['contract'])
+
     ## class method
     ## Change department
     @classmethod   ## Any change happen will efect all instances
     def change_department(self,new_department):
         self.department = new_department
+
+    # Static methods
+    @staticmethod
+    def say_welcome():
+        pass
     ## Define set and get for ENCAPSULATION Purpose
     def setProg(self):
         if self.funnel[-1] != 'contract':
@@ -80,6 +86,7 @@ class Prospect:
         else:
             print(f"segmant is NEW")
             print(self.send_mail()) ## Recursive Function
+
 
 
 
