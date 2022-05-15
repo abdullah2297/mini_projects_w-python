@@ -29,7 +29,6 @@ class Solution:
     def removeDuplicates(self, s, k):
     
         stack = [['#',0]]
-        
         for c in s:
             if stack[-1][0] == c:
                 stack[-1][1] += 1
@@ -42,8 +41,11 @@ class Solution:
         return distinct
 
 
+
+
+
 # Test
-print(Solution().removeDuplicates("deeedbbcccbdaa",3))  
+print(Solution().removeDuplicates("aaabbcccdd",3))  
 print(Solution().removeDuplicates("pbbcs",2)) 
 print(Solution().removeDuplicates("deeeedbbbcccbbddaa",4))  
 
